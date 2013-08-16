@@ -12,6 +12,7 @@ class dev-packages {
 
     include gcc
     include wget
+    include nodejs
 
     $devPackages = [ "vim", "curl", "git", "capistrano", "rubygems", "openjdk-7-jdk", "libaugeas-ruby" ]
     package { $devPackages:
@@ -20,7 +21,6 @@ class dev-packages {
     }
 
     package { 'less':
-	ensure   => latest,
 	provider => 'npm',
     }
 
@@ -215,4 +215,3 @@ include composer
 include phpqatools
 include memcached
 include redis
-include nodejs
